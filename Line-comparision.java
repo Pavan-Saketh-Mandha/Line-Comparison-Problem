@@ -1,5 +1,5 @@
 import java.util.*;
-public class LengthofLineUC2{
+class LengthofLineUC3 {
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter First Line values x1 and y1: ");
@@ -20,11 +20,15 @@ public class LengthofLineUC2{
                 lengthOfLine2 = Math.sqrt((x4-x3)*(x4-x3)+(y4-y3)*(y4-y3));
 		String str1 = String.valueOf(lengthOfLine1);
 		String str2 = String.valueOf(lengthOfLine2);
-		if(str1.equals(str2))
+		
+		System.out.println("The length of the First line is : "+lengthOfLine1);
+		System.out.println("The length of the Second line is : "+lengthOfLine2);
+		
+		if(str1.compareTo(str2) == 0)
 			System.out.println("The length of two lines are equal");
+		else if(str1.compareTo(str2)<0)
+			System.out.println("The length of First line is less than the lenght of Second line");
 		else
-			System.out.println("The length of two lines are not equal");
-		System.out.println("The length of the first line is : "+lengthOfLine1);
-		System.out.println("The length of the second line is : "+lengthOfLine2);
+			System.out.println("The lenght of First line is greater than the length of Second line");
+		}
 	}
-}
